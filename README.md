@@ -15,3 +15,5 @@ then i only run the bash program and it will produce the output according to the
 
 # Find the culprit
 If it stops before completing the full execution then input.txt contains a case for which correct.cpp and wrong.cpp are producing different output
+
+```bash test.sh```
