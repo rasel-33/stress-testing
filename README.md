@@ -1,19 +1,21 @@
-# stress-testing
-This repository mainly contains a stress testing approach for C++ in Linux system using bash scripting
+# 🚀 Stress Testing for C++ in Linux
 
+This repository provides a **stress testing** approach for C++ programs using **Bash scripting** in a Linux environment. The goal is to find test cases where an optimized solution produces incorrect results by comparing its output against a brute-force (correct) solution.
 
-Every i suppose to find a test case where my program is not providing correct output, then here comes the stress testing part to rescue.
+## 📌 How It Works
 
-# Get ready for the Procedure
-The directory contains some files correct.cpp which should have a bruteforce or correct solution. It will run against the random input as obeying the constraints.
-Another file wrong.cpp will contain optimized code which i suppose to have a case that produces an incorrect verdict.
-It also have a generator.cpp file that produces the random input.
+1. The directory contains:
+   - **`correct.cpp`** – A brute-force or verified correct solution.
+   - **`wrong.cpp`** – An optimized solution that might fail on some test cases.
+   - **`generator.cpp`** – A random test case generator that follows problem constraints.
 
-# Running program
-While running my solution against the bruteforce or the correct solution i have to edit all of these three files to ensure they ar working for same problem.
-then i only run the bash program and it will produce the output according to the output matching.
+2. The script generates random inputs and tests both solutions against them.
 
-# Find the culprit
-If it stops before completing the full execution then input.txt contains a case for which correct.cpp and wrong.cpp are producing different output
+3. If both programs produce the same output, the script continues testing. If a discrepancy is found, the process stops, and the failing test case is saved.
 
-```bash test.sh```
+## 🚀 How to Run
+
+1. **Ensure all three files (`correct.cpp`, `wrong.cpp`, `generator.cpp`) are set up for the same problem.**
+2. **Run the stress test script:**
+   ```bash
+   bash test.sh
